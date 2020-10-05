@@ -1,0 +1,132 @@
+html, body {
+  display: flex;
+  justify-content: center;
+}
+
+/* Initialize each tag margin and padding */
+body, h1, p, ul, li {
+  margin:0; padding:0
+ }
+
+/* Specifies the default and maximum sizes */
+body {
+  width: 40ch;
+  max-width: 40ch;
+  min-width: 20ch;
+}
+
+.card {
+  /* Give space 1rem from the top of the screen */
+  margin-top: 1em;
+
+  background-color: rgb(233, 233, 233);
+
+  /* Specify browser-specific box shadows */
+  -webkit-box-shadow: 5px 5px 5px lightgrey;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    5px 5px 5px lightgrey;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         5px 5px 5px lightgrey;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+  text-align: center;
+}
+
+.profile {
+  /* Apply river image and background color */
+  background-image: linear-gradient( 180deg, transparent 68%,  rgb(233, 233, 233) 10%), 
+    url('https://sait-wbdv.github.io/assessments/cpnt260/assignment-2/images/river.jpg');
+
+  /* Place Background Image at Top - With the bottom center of the image as a reference point */
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+
+  /* Center the face image */
+  display: flex;
+  justify-content: center;
+  align-items: baseline; 
+
+  /* Position the face image */
+  padding-top: 26%; 
+}
+
+.face_img {
+  /* Specify the face image size */
+  width: 20ch; 
+  height: 20ch;
+  /* max-width: 20ch;
+  max-height: 20ch; */
+
+  /* Maintain image aspect ratio when resizing browser windows */
+  object-fit: cover;
+
+  /* Circle the face image and surround gray colored border */
+  border: 8px solid rgb(233, 233, 233);
+  border-radius: 50%;
+}
+
+h1 {
+  /* Adjust the size, thickness, line height, and spacing of the font of name */
+  /*font-family: 'Noto Serif KR', serif; */
+  font-family: 'Libre Baskerville', serif; 
+  font-size: 1.3em;
+  font-weight: bolder;
+  /*font-stretch: extra-condensed;*/
+  letter-spacing: -0.05em;
+
+  /* Circle the face image and surround gray colored border */
+  line-height: 290%;
+
+  display: inline-block;
+    -webkit-transform: scale(1, 0.85);
+    -moz-transform: scale(1, 0.85);
+    -ms-transform: scale(1, 0.85);
+    -o-transform: scale(1, 0.85);
+    transform: scale(1, 0.85);
+}
+
+.profile~p {
+  text-align: center;
+
+  padding: 0em 0.7em 1em 0.7em;
+
+  /* Adjust the thickness, line height, and spacing of the font of paragraph */
+  /* font-family: 'Nunito', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+
+  line-height: 150%;
+}
+
+footer {
+  border-top: solid 1.5px lightgray;
+
+  background-color: rgb(233, 233, 233);
+
+  display: flex;
+  justify-content: center;
+  align-items: baseline
+}
+
+ul {
+  list-style-type: none;
+
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+
+  /* Provides the same gap between social media icons in the footer area */
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  
+  align-items: center;
+}
+
+ul li a{
+  text-align: center;
+  font-size: 2.5em;
+  color: rgb(27, 27, 110);
+}
+
+/* Reduce screen size */
+@media (max-width:40ch) {
+  html {transform:scale(0.5, 0.5)}
+}
